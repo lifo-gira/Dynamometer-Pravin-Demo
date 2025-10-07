@@ -14,7 +14,7 @@ IST = pytz.timezone("Asia/Kolkata")
 
 
 # MongoDB setup
-client = motor_asyncio.AsyncIOMotorClient("mongodb+srv://dynamometerXO:dynamometerXO@cluster0.n6f8six.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = motor_asyncio.AsyncIOMotorClient("mongodb+srv://dynamometerXO:dynamometerXO@pravindynamo.vnvhagg.mongodb.net/?retryWrites=true&w=majority&appName=PravinDynamo")
 database = client.Main
 user_collection = database.User 
 patient_data_collection = database.PatientData 
@@ -471,5 +471,6 @@ async def get_user_ids_for_therapist(therapist_email: str):
 
         if user_id and therapist_assigned == therapist_email:
             user_ids.append(user_id)
+
 
     return user_ids
